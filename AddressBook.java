@@ -10,5 +10,4 @@ public class AddressBook {
         this.tel = tel;
         this.email = email;
     }
-
 }

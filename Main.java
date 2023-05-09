@@ -1,5 +1,8 @@
 package oop;
 
+import StoneGame.StoneGame;
+import StoneGame.Player;
+
 public class Main {
     public static void main(String[] args){
         //アカウント情報を作成
@@ -19,7 +22,7 @@ public class Main {
         myPhone.addAddressBook(addressBook3);
 
         //appの登録
-        myPhone.apps = new String[]{"Instagram","LINE","Twitter"};
+        myPhone.apps = new App[]{};
 
         myPhone.displayDeviceInfo();
         System.out.println();
@@ -40,5 +43,10 @@ public class Main {
 //         インストールされたアプリ一覧を表示
         System.out.println("インストールされたアプリ");
         myPhone.displayAppList();
+        Player[] players = {new Player("A"),new Player("B")};
+        StoneGame game = new StoneGame(players);
+//        StoneGame player = new StoneGame(players);
+        myPhone.install(game);
+        System.out.println(game);
     }
 }
